@@ -1,0 +1,11 @@
+$no-padding: 0px 0px;
+$button-color-theme: #FFFFFF;
+
+.no-padding {
+	padding: $no-padding;
+}
+
+.button-white-theme {
+	border-color: $button-color-theme;
+	color: $button-color-theme;
+}

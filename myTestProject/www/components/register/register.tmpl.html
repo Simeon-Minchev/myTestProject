@@ -1,0 +1,34 @@
+<ion-view class="register-view" view-title="Register">
+	<div class="bar bar-header navbar-cstm">
+		<button class="button icon-left ion-chevron-left button-clear" ng-click="vm.goTo('login')"></button>
+		<div class="h1 title">Register</div>
+	</div>
+	<ion-content class="padding main-view-container">
+		<div class="input-padding">
+			<h3 class="input-label">Enter Email</h3>
+			<label class="item item-input">
+				<input type="text" placeholder="Email" ng-model="email">
+			</label>
+		</div>
+		<div class="input-padding">
+			<h3 class="input-label">Enter Password</h3>
+			<label class="item item-input">
+				<input type="text" placeholder="Password" ng-model="password">
+			</label>
+		</div>
+		<div class="input-padding">
+			<h3 class="input-label">Enter your Name</h3>
+			<label class="item item-input">
+				<input type="text" placeholder="Name" ng-model="name">
+			</label>
+		</div>
+		<div class="padding-top">
+			<div class="">
+				<a class="button button-outline button-stable button-block button-white-theme" ng-click="vm.register(email, password, name)">
+					Submit
+				</a>
+			</div>
+		</div>
+		<uib-alert ng-if="vm.message.show" type="{{vm.message.type}}" dismiss-on-timeout="{{vm.message.delay}}" close="vm.close()">{{vm.message.text}}</uib-alert>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+{
+  "name": "my_test_server_api",
+  "version": "1.0.0",
+  "description": "test project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Simeon Minchev",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "express-jwt": "^3.3.0",
+    "gridfs-stream": "^1.1.1",
+    "https": "^1.0.0",
+    "jsonwebtoken": "^5.4.1",
+    "mongoose": "^4.2.8",
+    "mongoose-ttl": "0.0.3",
+    "multer": "^1.1.0",
+    "uuid": "^2.0.1"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.5.4"
+  }
+}

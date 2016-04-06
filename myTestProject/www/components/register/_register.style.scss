@@ -1,0 +1,15 @@
+// NAVBAR CUSTOM //
+$navbar-cstm-background-color: #0A5FB4;
+$navbar-cstm-color: #FFFFFF;
+// MAIN VIEW CONTAINER //
+$main-view-container-padding: 43px;
+.register-view {
+	.navbar-cstm {
+		background-color: $navbar-cstm-background-color;
+		color: $navbar-cstm-color;
+	}
+	
+	.main-view-container {
+		padding-top: $main-view-container-padding;
+	}
+}

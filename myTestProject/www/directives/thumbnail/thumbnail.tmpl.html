@@ -1,0 +1,24 @@
+<div class="thumbnail-view">
+	<section>
+		<div class="thumbnail-container">
+			<div class="card-cstm inline-block" ng-click="toogleClass()" ng-class="{'flipped' : selected}">
+				<figure class="front">
+					<div class="item-image thumbnail-cstm">
+						<i class="icon {{ionClass}}"></i>
+						<h5>{{file.fileName}}</h5>
+					</div>
+				</figure>
+				<figure class="back">
+					<div class="thumbnail-cstm">
+						<a ng-click="delete({fileName: file.fileName})" class="item item-icon-left item-cstm">
+							<i class="icon ion-trash-a icon-cstm"></i> Delete document
+						</a>
+						<a ng-click="download({fileName: file.fileName})" class="item item-icon-left item-cstm">
+							<i class="icon ion-archive icon-cstm"></i> Download document
+						</a>
+					</div>
+				</figure>
+			</div>
+		</div>
+	</section>
+</div>

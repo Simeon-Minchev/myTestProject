@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+</head>
+
+<body ng-app="myTestProject">
+    <!--3-TH PARTY DEPENDENCIES-->
+    <script src="lib/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <link rel='stylesheet' href='lib/angular-loading-bar/build/loading-bar.min.css' type='text/css' media='all' />
+    <script type='text/javascript' src='lib/angular-loading-bar/build/loading-bar.min.js'></script>
+    <!--GENERAL-->
+    <script src="app.module.js"></script>
+    <script src="app.routes.js"></script>
+    <script src="app.config.js"></script>
+    <!--CLASSES-->
+    <script src="classes/user.class.js"></script>
+    <!--COMPONENTS-->
+    <script src="components/mainView/mainView.ctrl.js"></script>
+    <script src="components/login/login.ctrl.js"></script>
+    <script src="components/register/register.ctrl.js"></script>
+    <!--SERVICES-->
+    <script src="services/communication.srvc.js"></script>
+    <script src="services/login.srvc.js"></script>
+    <script src="services/user.srvc.js"></script>
+    <script src="services/message.srvc.js"></script>
+    <script src="services/redirect.srvc.js"></script>
+    <script src="services/sideMenu.srvc.js"></script>
+    <script src="services/fileUpload.srvc.js"></script>
+    <script src="services/fileDownload.srvc.js"></script>
+    <script src="services/fileDelete.srvc.js"></script>
+    <!--CONSTANTS-->
+    <script src="config/constants.cnst.js"></script>
+    <!--INTERCEPTORS-->
+    <script src="interceptors/errorInterceptor.srvc.js"></script>
+    <script src="interceptors/successInterceptor.srvc.js"></script>
+    <script src="interceptors/аuthorizationInterceptor.srvc.js"></script>
+    <!--DIRECTIVES-->
+    <script src="directives/fileUpload/fileUpload.drct.js"></script>
+    <script src="directives/thumbnail/thumbnail.drct.js"></script>
+
+    <ion-nav-view></ion-nav-view>
+
+</body>
+
+</html>

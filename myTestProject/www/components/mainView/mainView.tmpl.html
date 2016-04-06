@@ -1,0 +1,73 @@
+<ion-view class="main-view" view-title="Hello {{vm.user.name}}">
+	<ion-nav-bar class="bar bar-header navbar-cstm">
+		<ion-nav-buttons side="left">
+			<button menu-toggle="left" class="button button-icon icon ion-navicon light" ng-click="sm.toggleLeft()"></button>
+		</ion-nav-buttons>
+	</ion-nav-bar>
+	<ion-side-menus>
+		<!-- Left menu -->
+		<ion-side-menu class="main-view-container" side="left">
+			<div class="list">
+				<a class="item item-icon-left" file-upload="vm.uploadFile(file)">
+					<i class="icon ion-upload"></i> Upload file
+				</a>
+			</div>
+		</ion-side-menu>
+
+		<ion-side-menu-content class="main-view-container">
+			<div ng-if="sm.selected === 'documents'" ng-repeat="document in vm.user.files.documents">
+				<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+					<thumbnail file="document" ion-class="'ion-document-text'" download="vm.downloadFile(fileName)" delete="vm.deleteFile(fileName)"></thumbnail>
+				</div>
+			</div>
+			<div ng-if="sm.selected === 'images'" ng-repeat="image in vm.user.files.images">
+				<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+					<thumbnail file="image" ion-class="'ion-image'" download="vm.downloadFile(fileName)" delete="vm.deleteFile(fileName)"></thumbnail>
+				</div>
+			</div>
+			<div ng-if="sm.selected === 'videos'" ng-repeat="video in vm.user.files.videos">
+				<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+					<thumbnail file="video" ion-class="'ion-film-marker'" download="vm.downloadFile(fileName)" delete="vm.deleteFile(fileName)"></thumbnail>
+				</div>
+			</div>
+			<div ng-if="sm.selected === 'music'" ng-repeat="music in vm.user.files.music">
+				<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+					<thumbnail file="music" ion-class="'ion-music-note'" download="vm.downloadFile(fileName)" delete="vm.deleteFile(fileName)"></thumbnail>
+				</div>
+			</div>
+			<div ng-if="sm.selected === 'other'" ng-repeat="other in vm.user.files.other">
+				<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+					<thumbnail file="other" ion-class="'ion-document'" download="vm.downloadFile(fileName)" delete="vm.deleteFile(fileName)"></thumbnail>
+				</div>
+			</div>
+			<div class="message" uib-collapse="!vm.message.show">
+				<uib-alert ng-if="vm.message.show" type="{{vm.message.type}}" dismiss-on-timeout="{{vm.message.delay}}" close="vm.close()">{{vm.message.text}}</uib-alert>
+			</div>
+		</ion-side-menu-content>
+	</ion-side-menus>
+	<div class="bar bar-subheader navbar-secondary">
+		<div class="tabs tabs-icon-top">
+			<a class="tab-item tabs-cstm" ng-click="sm.selected = 'documents'" ng-class="{active: sm.selected === 'documents'}">
+				<i class="icon ion-document-text"></i> Documents
+			</a>
+			<a class="tab-item tabs-cstm" ng-click="sm.selected = 'images'" ng-class="{active: sm.selected === 'images'}">
+				<i class="icon ion-images"></i> Images
+			</a>
+			<a class="tab-item tabs-cstm" ng-click="sm.selected = 'videos'" ng-class="{active: sm.selected === 'videos'}">
+				<i class="icon ion-film-marker"></i> Videos
+			</a>
+			<a class="tab-item tabs-cstm" ng-click="sm.selected = 'music'" ng-class="{active: sm.selected === 'music'}">
+				<i class="icon ion-music-note"></i> Music
+			</a>
+			<a class="tab-item tabs-cstm" ng-click="sm.selected = 'other'" ng-class="{active: sm.selected === 'other'}">
+				<i class="icon ion-document"></i> Other
+			</a>
+		</div>
+	</div>
+	<!--<div class="bar bar-header bar-positive">
+		<h1 class="title">Hello {{vm.user.name}}</h1>
+	</div>-->
+	<ion-content class="padding">
+
+	</ion-content>
+</ion-view>

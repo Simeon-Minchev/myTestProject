@@ -1,0 +1,31 @@
+<ion-view class="login-view" view-title="Register">
+	<ion-content class="padding">
+		<div class="input-padding">
+			<h3 class="input-label">Username</h3>
+			<label class="item item-input">
+				<input type="text" placeholder="Username" ng-model="username">
+			</label>
+		</div>
+		<div class="input-padding">
+			<h3 class="input-label">Password</h3>
+			<label class="item item-input">
+				<input type="text" placeholder="Password" ng-model="password">
+			</label>
+		</div>
+		<div class="row padding-top">
+			<div class="col">
+				<a class="button button-outline button-stable button-block button-white-theme" ng-click="vm.login(username, password)">
+					Login
+				</a>
+			</div>
+			<div class="col">
+				<a class="button button-outline button-stable button-block button-white-theme" href="#/register">
+					Register
+				</a>
+			</div>
+		</div>
+		<div uib-collapse="!vm.message.show">
+			<uib-alert ng-if="vm.message.show" type="{{vm.message.type}}" dismiss-on-timeout="{{vm.message.delay}}" close="vm.close()">{{vm.message.text}}</uib-alert>
+		</div>
+	</ion-content>
+</ion-view>

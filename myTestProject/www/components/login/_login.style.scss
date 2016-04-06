@@ -1,0 +1,23 @@
+// LOGIN MAIN //
+$login-view-background-color: #0A5FB4;
+$login-view-height: 100%;
+$login-view-width: 100%;
+// INPUT PADDING //
+$login-view-input-padding: 20px;
+// INPUT LABEL //
+$login-view-input-label-color: #FFFFFF;
+
+.login-view {
+	background-color: $login-view-background-color;
+	height: $login-view-height;
+	widows: $login-view-width;
+	
+	.input-padding {
+		background-color: $login-view-background-color;
+		padding-top: $login-view-input-padding;
+	}
+	
+	.input-label {
+		color: $login-view-input-label-color;
+	}
+}
